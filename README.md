@@ -78,3 +78,29 @@ limitations under the License.
 ./gradlew build install
 ./gradlew :lib-leveldb-jni:bintrayUpload
 ```
+
+### Add this Dependency from github
+
+Step 1. Add the JitPack repository to build.gradle at the end of repositories:
+
+```gradle
+repositories {
+    // ...
+    maven { url "https://jitpack.io" }
+}
+```
+Step 2. Add the dependency in the form
+
+```gradle
+dependencies {
+    compile 'com.github.lincolnminto:leveldb-jni:0.0.8'
+}
+```
+
+It is possible to build the latest commit on the master branch, for example :
+
+```gradle
+dependencies {
+    compile 'com.github.lincolnminto:leveldb-jni:master-SNAPSHOT'
+}
+```
